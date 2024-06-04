@@ -1,0 +1,147 @@
+#main-footer {
+  background-color: #191919;
+  color: #b9b9b9;
+}
+
+#main-footer ul {
+  list-style: none;
+}
+
+#main-footer a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #b9b9b9;
+  display: inline-block;
+}
+
+/* ===== */
+
+#main-footer a.logo {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: var(--main-transition);
+}
+
+#main-footer a.logo:hover {
+  color: var(--main-blue-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+#main-footer .social-links a {
+  --dim: 40px;
+  background-color: #313131;
+  width: var(--dim);
+  height: var(--dim);
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+
+.social-links li:first-child a {
+  --icon-clr: #0866ff;
+}
+
+.social-links li:nth-child(2) a {
+  --icon-clr: red;
+}
+
+.social-links li:last-child a {
+  --icon-clr: #0a66c2;
+}
+
+#main-footer .social-links a:hover {
+  background-color: var(--icon-clr);
+  color: #fff;
+}
+
+/* ======= */
+
+.important-links li {
+  padding: 10px 20px;
+}
+
+.important-links li:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.important-links li a {
+  position: relative;
+  transition: var(--main-transition);
+}
+
+.important-links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-blue-color);
+}
+
+#main-footer .important-links li a:hover {
+  color: #fff;
+  transform: translateX(10px);
+}
+
+/* ======= */
+
+ul.info li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+ul.info li i {
+  color: var(--main-blue-color);
+  font-size: 25px;
+}
+
+ul.info span {
+  display: block;
+}
+
+/* ====== */
+
+ul.images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+ul.images li {
+  width: 70px;
+}
+
+ul.images img {
+  width: 100%;
+  display: block;
+  border: 4px solid #fff;
+}
+
+/* ====== */
+
+@media (max-width: 767px) {
+  #main-footer {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  ul.info li {
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+  ul.images {
+    justify-content: center;
+  }
+}

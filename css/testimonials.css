@@ -1,0 +1,40 @@
+#testimonials {
+  background-color: var(--section-background);
+}
+
+#testimonials .item {
+  background-color: #fff;
+  position: relative;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+}
+
+#testimonials img {
+  --image-width: 50px;
+  width: var(--image-width);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(-1 / 2 * var(--image-width));
+  right: 0;
+  border: 5px solid var(--section-background);
+}
+
+#testimonials .user-name {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+#testimonials .job-title {
+  text-transform: capitalize;
+  color: var(--gray-777);
+}
+
+#testimonials .stars {
+  color: gold;
+}
+
+#testimonials p {
+  margin-top: 10px;
+  color: #555;
+}

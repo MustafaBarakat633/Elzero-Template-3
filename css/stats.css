@@ -1,0 +1,60 @@
+#stats {
+  background-image: url("../images/stats.jpg");
+  position: relative;
+  z-index: 1;
+}
+
+#stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+
+.stat-item {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+}
+
+.stat-item::before,
+.stat-item::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 0;
+  background-color: var(--main-blue-color);
+  transition: 1s;
+}
+
+.stat-item::before {
+  bottom: 0;
+  left: 0;
+}
+
+.stat-item::after {
+  top: 0;
+  right: 0;
+}
+
+.stat-item:hover::before,
+.stat-item:hover::after {
+  height: 100%;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.stat-factor {
+  color: var(--main-blue-color);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}

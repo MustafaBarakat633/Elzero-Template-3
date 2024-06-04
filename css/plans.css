@@ -1,0 +1,147 @@
+#plans {
+  background-color: var(--section-background);
+}
+
+#plans .grid-3-cols {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.plan-item {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.plan-item::before,
+.plan-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+
+.plan-item::before {
+  top: 0;
+  right: 0;
+}
+
+.plan-item::after {
+  bottom: 0;
+  left: 0;
+}
+
+.plan-item:hover::before,
+.plan-item:hover::after {
+  width: 100%;
+}
+
+.card-head {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .plan-item.most-popular {
+    top: -30px;
+  }
+}
+
+.plan-item.most-popular .card-head::before {
+  content: "most popular";
+  text-transform: capitalize;
+  position: absolute;
+  background-color: var(--main-blue-color);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  top: 0;
+  right: 20px;
+  padding: 20px 8px 50px 10px;
+}
+
+.plan-item.most-popular .card-head::after {
+  content: "";
+  border-color: transparent transparent #fff transparent;
+  border-width: 28px;
+  border-style: solid;
+  position: absolute;
+  top: 131px;
+  right: 20px;
+  transition: 0.2s;
+}
+
+.plan-item.most-popular:hover .card-head::after {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+
+.plan-item h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.plan-item img {
+  width: 100px;
+}
+
+.plan-item .plan-price {
+  color: var(--main-blue-color);
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.plan-item .plan-period {
+  color: var(--gray-777);
+  text-transform: capitalize;
+}
+
+.plan-info {
+  list-style: none;
+}
+
+.plan-info li {
+  padding: 20px;
+  position: relative;
+}
+
+.plan-info li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.plan-info li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 15px;
+  font-weight: 900;
+  color: var(--main-blue-color);
+}
+
+.plan-btn {
+  text-align: center;
+}
+
+.plan-btn a {
+  color: var(--main-blue-color);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: 2.5rem;
+  display: inline-block;
+  border: 2px solid var(--main-blue-color);
+  padding: 10px 18px;
+  border-radius: 5px;
+  margin: 10px 0 30px;
+  transition: var(--main-transition);
+}
+
+.plan-btn a:hover {
+  color: #fff;
+  background-color: var(--main-blue-color);
+}

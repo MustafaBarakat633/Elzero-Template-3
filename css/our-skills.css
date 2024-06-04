@@ -1,0 +1,53 @@
+#our-skills {
+  background-color: #fff;
+}
+
+@media (max-width: 991px) {
+  #our-skills .image {
+    display: none;
+  }
+}
+
+#our-skills .progress-item {
+  margin-bottom: 12px;
+}
+
+#our-skills .prog-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#our-skills .prog-bar {
+  height: 30px;
+  background-color: #eee;
+}
+
+#our-skills .prog-bar span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-blue-color);
+  position: relative;
+}
+
+#our-skills .prog-bar span::before {
+  content: attr(data-progress);
+  position: absolute;
+  right: 0;
+  transform: translate(50%);
+  top: -45px;
+  background-color: #ddd;
+  padding: 0 8px;
+  border-radius: 5px;
+}
+
+#our-skills .prog-bar span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  transform: translate(50%);
+  top: -16px;
+  border-style: solid;
+  border-color: #ddd transparent transparent transparent;
+  border-width: 8px;
+}
