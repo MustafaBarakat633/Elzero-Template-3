@@ -1,7 +1,3 @@
-#team-members {
-  background-color: #fff;
-}
-
 #team-members .item {
   --box-border-radius: 20px;
   position: relative;
@@ -36,6 +32,12 @@
   display: flex;
 }
 
+#team-members .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #team-members img {
   max-width: 100%;
   border-radius: var(--box-border-radius);
@@ -62,6 +64,7 @@
 
 #team-members .social-links a:hover {
   color: var(--main-blue-color);
+  background-color: #ddd;
 }
 
 #team-members .social-links a:last-child:hover {
@@ -70,7 +73,7 @@
 
 #team-members .item .text {
   padding-left: 80px;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 #team-members .item .name {

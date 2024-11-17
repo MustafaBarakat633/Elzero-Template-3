@@ -1,7 +1,3 @@
-#events {
-  background-color: #fff;
-}
-
 @media (max-width: 991px) {
   #events .image {
     display: none;

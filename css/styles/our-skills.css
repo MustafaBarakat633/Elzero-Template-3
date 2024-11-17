@@ -1,7 +1,3 @@
-#our-skills {
-  background-color: #fff;
-}
-
 @media (max-width: 991px) {
   #our-skills .image {
     display: none;

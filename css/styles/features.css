@@ -1,19 +1,19 @@
-#features {
-  background-color: #fff;
-}
-
 .feature-item {
   border: 1px solid #ccc;
   background-color: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-item:first-child {
-  --clr: #f44036;
+  --clr: #009688;
 }
 
 .feature-item:nth-child(2) {
-  --clr: #009688;
+  --clr: #f44036;
 }
 
 .feature-item:last-child {

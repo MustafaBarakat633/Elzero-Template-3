@@ -1,7 +1,3 @@
-#how-it-works {
-  background-color: var(--section-background);
-}
-
 @media (max-width: 940px) {
   #how-it-works .flexbox-container {
     flex-direction: column;
